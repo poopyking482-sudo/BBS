@@ -795,4 +795,312 @@ extern "C" {
 
 #define _tcscoll _mbscoll
 #define _tcscoll_l _mbscoll_l
-#defin
+#define _tcsnicmp_l _mbsnbicmp_l
+
+#define _tcscoll _mbscoll
+#define _tcscoll_l _mbscoll_l
+#define _tcsicoll _mbsicoll
+#define _tcsicoll_l _mbsicoll_l
+#define _tcsnccoll _mbsncoll
+#define _tcsnccoll_l _mbsncoll_l
+#define _tcsncoll _mbsnbcoll
+#define _tcsncoll_l _mbsnbcoll_l
+#define _tcsncicoll _mbsnicoll
+#define _tcsncicoll_l _mbsnicoll_l
+#define _tcsnicoll _mbsnbicoll
+#define _tcsnicoll_l _mbsnbicoll_l
+
+#define _tcsclen _mbslen
+#define _tcscnlen _mbsnlen
+#define _tcsclen_l _mbslen_l
+#define _tcscnlen_l _mbsnlen_l
+#define _tcsnccat _mbsncat
+#define _tcsnccat_l _mbsncat_l
+#define _tcsnccpy _mbsncpy
+#define _tcsnccpy_l _mbsncpy_l
+#define _tcsncset _mbsnset
+#define _tcsncset_l _mbsnset_l
+
+#define _tcsdec _mbsdec
+#define _tcsinc _mbsinc
+#define _tcsnbcnt _mbsnbcnt
+#define _tcsnccnt _mbsnccnt
+#define _tcsnextc _mbsnextc
+#define _tcsninc _mbsninc
+#define _tcsspnp _mbsspnp
+
+#define _tcslwr _mbslwr
+#define _tcslwr_l _mbslwr_l
+#define _tcsupr _mbsupr
+#define _tcsupr_l _mbsupr_l
+
+#define _tclen _mbclen
+#define _tccpy _mbccpy
+#define _tccpy_l _mbccpy_l
+#else
+
+  _CRTIMP _CONST_RETURN char *__cdecl _tcschr(const char *_Str,unsigned int _Val);
+  _CRTIMP size_t __cdecl _tcscspn(const char *_Str,const char *_Control);
+  _CRTIMP char *__cdecl _tcsncat(char *_Dst,const char *_Src,size_t _MaxCount);
+  _CRTIMP char *__cdecl _tcsncat_l(char *_Dst,const char *_Src,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP char *__cdecl _tcsncpy(char *_Dst,const char *_Src,size_t _MaxCount);
+  _CRTIMP char *__cdecl _tcsncpy_l(char *_Dst,const char *_Src,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP _CONST_RETURN char *__cdecl _tcspbrk(const char *_Str,const char *_Control);
+  _CRTIMP _CONST_RETURN char *__cdecl _tcsrchr(const char *_Str,unsigned int _Ch);
+  _CRTIMP size_t __cdecl _tcsspn(const char *_Str,const char *_Control);
+  _CRTIMP _CONST_RETURN char *__cdecl _tcsstr(const char *_Str,const char *_Substr);
+  _CRTIMP char *__cdecl _tcstok(char *_Str,const char *_Delim);
+  _CRTIMP char *__cdecl _tcstok_l(char *_Str,const char *_Delim,_locale_t _Locale);
+  _CRTIMP char *__cdecl _tcsnset(char *_Str,unsigned int _Val,size_t _MaxCount);
+  _CRTIMP char *__cdecl _tcsrev(char *_Str);
+  _CRTIMP char *__cdecl _tcsset(char *_Str,unsigned int _Val);
+  _CRTIMP char *__cdecl _tcsset_l(char *_Str,unsigned int _Val,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcscmp(const char *_Str1,const char *_Str);
+  _CRTIMP int __cdecl _tcsicmp(const char *_Str1,const char *_Str2);
+  _CRTIMP int __cdecl _tcsicmp_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcsnccmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsncmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsncicmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsncicmp_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcsnicmp(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsnicmp_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcscoll(const char *_Str1,const char *_Str2);
+  _CRTIMP int __cdecl _tcscoll_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcsicoll(const char *_Str1,const char *_Str2);
+  _CRTIMP int __cdecl _tcsicoll_l(const char *_Str1,const char *_Str2,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcsnccoll(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsnccoll_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcsncoll(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsncoll_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcsncicoll(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsncicoll_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP int __cdecl _tcsnicoll(const char *_Str1,const char *_Str2,size_t _MaxCount);
+  _CRTIMP int __cdecl _tcsnicoll_l(const char *_Str1,const char *_Str2,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP size_t __cdecl _tcsclen(const char *_Str);
+  _CRTIMP size_t __cdecl _tcscnlen(const char *_Str,size_t _MaxCount);
+  _CRTIMP size_t __cdecl _tcsclen_l(const char *_Str,_locale_t _Locale);
+  _CRTIMP size_t __cdecl _tcscnlen_l(const char *_Str,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP char *__cdecl _tcsnccat(char *_Dst,const char *_Src,size_t _MaxCount);
+  _CRTIMP char *__cdecl _tcsnccat_l(char *_Dst,const char *_Src,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP char *__cdecl _tcsnccpy(char *_Dst,const char *_Src,size_t _MaxCount);
+  _CRTIMP char *__cdecl _tcsnccpy_l(char *_Dst,const char *_Src,size_t _MaxCount,_locale_t _Locale);
+  _CRTIMP char *__cdecl _tcsncset(char *_Str,unsigned int _Val,size_t _MaxCount);
+  _CRTIMP char *__cdecl _tcsdec(const char *_Start,const char *_Pos);
+  _CRTIMP char *__cdecl _tcsinc(const char *_Ptr);
+  _CRTIMP size_t __cdecl _tcsnbcnt(const char *_Str,size_t _MaxCount);
+  _CRTIMP size_t __cdecl _tcsnccnt(const char *_Str,size_t _MaxCount);
+  _CRTIMP unsigned int __cdecl _tcsnextc (const char *_Str);
+  _CRTIMP char *__cdecl _tcsninc(const char *_Ptr,size_t _Count);
+  _CRTIMP char *__cdecl _tcsspnp(const char *_Str1,const char *_Str2);
+  _CRTIMP char *__cdecl _tcslwr(char *_Str);
+  _CRTIMP char *__cdecl _tcslwr_l(char *_Str,_locale_t _Locale);
+  _CRTIMP char *__cdecl _tcsupr(char *_Str);
+  _CRTIMP char *__cdecl _tcsupr_l(char *_Str,_locale_t _Locale);
+  _CRTIMP size_t __cdecl _tclen(const char *_Str);
+  _CRTIMP void __cdecl _tccpy(char *_DstCh,const char *_SrcCh);
+
+#ifdef __cplusplus
+#ifndef _CPP_TCHAR_INLINES_DEFINED
+#define _CPP_TCHAR_INLINES_DEFINED
+  extern "C++" {
+    extern inline char *__cdecl _tcschr(char *_S,unsigned int _C) { return ((char *)_tcschr((const char *)_S,_C)); }
+    extern inline char *__cdecl _tcspbrk(char *_S,const char *_P) { return ((char *)_tcspbrk((const char *)_S,_P)); }
+    extern inline char *__cdecl _tcsrchr(char *_S,unsigned int _C) { return ((char *)_tcsrchr((const char *)_S,_C)); }
+    extern inline char *__cdecl _tcsstr(char *_S,const char *_P) { return ((char *)_tcsstr((const char *)_S,_P)); }
+  }
+#endif
+#endif
+#endif
+
+#define _tccmp(_cp1,_cp2) _tcsnccmp(_cp1,_cp2,1)
+
+#define _istalnum _ismbcalnum
+#define _istalnum_l _ismbcalnum_l
+#define _istalpha _ismbcalpha
+#define _istalpha_l _ismbcalpha_l
+#define _istdigit _ismbcdigit
+#define _istdigit_l _ismbcdigit_l
+#define _istgraph _ismbcgraph
+#define _istgraph_l _ismbcgraph_l
+#define _istlegal _ismbclegal
+#define _istlegal_l _ismbclegal_l
+#define _istlower _ismbclower
+#define _istlower_l _ismbclower_l
+#define _istprint _ismbcprint
+#define _istprint_l _ismbcprint_l
+#define _istpunct _ismbcpunct
+#define _istpunct_l _ismbcpunct_l
+#define _istspace _ismbcspace
+#define _istspace_l _ismbcspace_l
+#define _istupper _ismbcupper
+#define _istupper_l _ismbcupper_l
+
+#define _totupper _mbctoupper
+#define _totupper_l _mbctoupper_l
+#define _totlower _mbctolower
+#define _totlower_l _mbctolower_l
+
+#define _istlead _ismbblead
+#define _istleadbyte isleadbyte
+#define _istleadbyte_l _isleadbyte_l
+#else
+
+#ifndef __TCHAR_DEFINED
+#define __TCHAR_DEFINED
+  typedef char _TCHAR;
+  typedef signed char _TSCHAR;
+  typedef unsigned char _TUCHAR;
+  typedef char _TXCHAR;
+  typedef int _TINT;
+#endif
+
+#ifndef _TCHAR_DEFINED
+#define _TCHAR_DEFINED
+#ifndef        NO_OLDNAMES
+  typedef char TCHAR;
+#endif
+#endif
+
+#define _tcschr strchr
+#define _tcscspn strcspn
+#define _tcsncat strncat
+#define _tcsncat_l _strncat_l
+#define _tcsncpy strncpy
+#define _tcsncpy_l _strncpy_l
+#define _tcspbrk strpbrk
+#define _tcsrchr strrchr
+#define _tcsspn strspn
+#define _tcsstr strstr
+#define _tcstok strtok
+#define _tcstok_l _strtok_l
+
+#define _tcsnset _strnset
+#define _tcsnset_l _strnset_l
+#define _tcsrev _strrev
+#define _tcsset _strset
+
+#define _tcscmp strcmp
+#define _tcsicmp _stricmp
+#define _tcsicmp_l _stricmp_l
+#define _tcsnccmp strncmp
+#define _tcsncmp strncmp
+#define _tcsncicmp _strnicmp
+#define _tcsncicmp_l _strnicmp_l
+#define _tcsnicmp _strnicmp
+#define _tcsnicmp_l _strnicmp_l
+
+#define _tcscoll strcoll
+#define _tcscoll_l _strcoll_l
+#define _tcsicoll _stricoll
+#define _tcsicoll_l _stricoll_l
+#define _tcsnccoll _strncoll
+#define _tcsnccoll_l _strncoll_l
+#define _tcsncoll _strncoll
+#define _tcsncoll_l _strncoll_l
+#define _tcsncicoll _strnicoll
+#define _tcsncicoll_l _strnicoll_l
+#define _tcsnicoll _strnicoll
+#define _tcsnicoll_l _strnicoll_l
+
+#define _tcsclen strlen
+#define _tcscnlen strnlen
+#define _tcsclen_l(_String,_Locale) strlen(_String)
+#define _tcscnlen_l(_String,_Max_count,_Locale) strnlen_l((_String),(_Max_count))
+#define _tcsnccat strncat
+#define _tcsnccat_l _strncat_l
+#define _tcsnccpy strncpy
+#define _tcsnccpy_l _strncpy_l
+#define _tcsncset _strnset
+
+#define _tcsdec _strdec
+#define _tcsinc _strinc
+#define _tcsnbcnt _strncnt
+#define _tcsnccnt _strncnt
+#define _tcsnextc _strnextc
+#define _tcsninc _strninc
+#define _tcsspnp _strspnp
+
+#define _tcslwr _strlwr
+#define _tcslwr_l _strlwr_l
+#define _tcsupr _strupr
+#define _tcsupr_l _strupr_l
+#define _tcsxfrm strxfrm
+#define _tcsxfrm_l _strxfrm_l
+
+#define _istlead(_Char) (0)
+#define _istleadbyte(_Char) (0)
+#define _istleadbyte_l(_Char,_Locale) (0)
+
+#define _tclen(_pc) (1)
+#define _tccpy(_pc1,_cpc2) (*(_pc1) = *(_cpc2))
+#define _tccmp(_cpc1,_cpc2) (((unsigned char)*(_cpc1))-((unsigned char)*(_cpc2)))
+
+  /* dirent structures and functions */
+#define _tdirent        dirent
+#define _TDIR                 DIR
+#define _topendir        opendir
+#define _tclosedir        closedir
+#define _treaddir        readdir
+#define _trewinddir        rewinddir
+#define _ttelldir        telldir
+#define _tseekdir        seekdir
+
+#define _istalnum isalnum
+#define _istalnum_l _isalnum_l
+#define _istalpha isalpha
+#define _istalpha_l _isalpha_l
+#define _istdigit isdigit
+#define _istdigit_l _isdigit_l
+#define _istgraph isgraph
+#define _istgraph_l _isgraph_l
+#define _istlower islower
+#define _istlower_l _islower_l
+#define _istprint isprint
+#define _istprint_l _isprint_l
+#define _istpunct ispunct
+#define _istpunct_l _ispunct_l
+#define _istspace isspace
+#define _istspace_l _isspace_l
+#define _istupper isupper
+#define _istupper_l _isupper_l
+
+#define _totupper toupper
+#define _totupper_l _toupper_l
+#define _totlower tolower
+#define _totlower_l _tolower_l
+
+#define _istlegal(_c) (1)
+
+#ifndef NULL
+#ifdef __cplusplus
+#define NULL 0
+#else
+#define NULL ((void *)0)
+#endif
+#endif
+
+#define _strdec(_cpc1,_cpc2) ((_cpc1)>=(_cpc2) ? NULL : (_cpc2)-1)
+#define _strinc(_pc) ((_pc)+1)
+#define _strnextc(_cpc) ((unsigned int) *(const unsigned char *)(_cpc))
+#define _strninc(_pc,_sz) (((_pc)+(_sz)))
+  _CRTIMP size_t __cdecl __strncnt(const char *_Str,size_t _Cnt);
+#define _strncnt(_cpc,_sz) (__strncnt(_cpc,_sz))
+#define _strspnp(_cpc1,_cpc2) (!_cpc1 ? NULL : ((*((_cpc1)+strspn(_cpc1,_cpc2))) ? ((_cpc1)+strspn(_cpc1,_cpc2)) : NULL))
+
+#define _strncpy_l(_Destination,_Source,_Count,_Locale) (strncpy(_Destination,_Source,_Count))
+#define _strncat_l(_Destination,_Source,_Count,_Locale) (strncat(_Destination,_Source,_Count))
+#define _strtok_l(_String,_Delimiters,_Locale) (strtok(_String,_Delimiters))
+#define _strnset_l(_Destination,_Value,_Count,_Locale) (_strnset(_Destination,_Value,_Count))
+#define _strset_l(_Destination,_Value,_Locale) (_strset(_Destination,_Value))
+#endif
+#endif
+
+#define _T(x) __T(x)
+#define _TEXT(x) __T(x)
+
+#ifdef __cplusplus
+}
+#endif
+
+#include <sec_api/tchar_s.h>
+#endif
