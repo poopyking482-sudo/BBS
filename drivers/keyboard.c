@@ -28,14 +28,20 @@ const char kbd_us[128] = {
 
 char bbs_get_char(void) {
     uint8_t scancode = bbs_keyboard_get_scancode();
-    
-    // Crucial: Use bitwise & to check the high bit, not logical 'and'
+
+    // 1. Ignore key release events (when bit 7 is set)
     if (scancode & 0x80) {
         return 0; 
     }
-    
+
+    // 2. Prevent array index out of bounds
+    if (scancode >= 128) {
+        return 0;
+    }
+
     return kbd_us[scancode];
 }
+
 
 void bbs_simple_shell(void) {
     volatile char *vga = (volatile char*)0xB8000;
