@@ -32,7 +32,6 @@ static inline void process_command(int argc, char* argv[]) {
     output_message(argv[1]);
 }
 
-// Clean C entry point matching your custom execution model
 int main(int argc, char* argv[]) {
     process_command(argc, argv);
     kernel_exit(0);
