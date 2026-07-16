@@ -9,7 +9,7 @@ Thank you for contributing! Below is the official environment setup and developm
 Before contributing, you must install the following tools on your 32-bit development machine:
 
 * **Compilers & Assemblers:** 
-  *`gcc` (32-bit target toolchain, e.g., `i386-elf-gcc` or `i686-elf-gcc`)
+  * `gcc` (32-bit target toolchain, e.g., `i386-elf-gcc` or `i686-elf-gcc`)
   * `nasm` (configured for ELF32 output)
   * `linker` (needed to link kernel and files)
   * `make` (needed to build iso, especially for testing)
