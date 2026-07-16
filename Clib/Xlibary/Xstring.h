@@ -2,7 +2,7 @@
 #define XSTRING_H
 
 // A simple integer-to-string converter for printing numbers
-static inline char* printX(int num, char* str, int base) {
+static inline char* print(int num, char* str, int base) {
     int i = 0;
     int is_negative = 0;
 
