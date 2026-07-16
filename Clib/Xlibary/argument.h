@@ -15,7 +15,7 @@ static inline int is_empty(const char* str) { return str[0] == '\0'; }
 static inline int check_args(int argc) { return argc > 1; }
 
 static inline void handle_error(void) {
-    kernel_print("Error: No message provided.\n");
+    kernel_print("error: no function provided, exiting\n");
     kernel_exit(1);
 }
 
