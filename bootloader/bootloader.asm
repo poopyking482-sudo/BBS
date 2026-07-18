@@ -8,8 +8,6 @@ start:
     mov ss, ax
     mov sp, 0x7c00
 
-    call load_sectors      ; Load the rest of our OS
-    
     cli                    ; Disable interrupts for GDT switch
     lgdt [gdt_descriptor]  ; Load GDT
     
@@ -18,22 +16,22 @@ start:
     or eax, 0x1
     mov cr0, eax
     
-    jmp 0x08:init_32bit    ; Far jump to clear pipeline
+    jmp 0x08:init_32bit    ; Far jump to clear CPU pipeline
 
-%include "disk.asm"
 %include "gdt.asm"
 
 bits 32
 init_32bit:
-    mov ax, 0x10            ; Update segment registers
+    mov ax, 0x10            ; Update data segments
     mov ds, ax
     mov es, ax
     mov fs, ax
     mov gs, ax
     mov ss, ax
-    mov esp, 0x90000        ; Set up a safe 32-bit stack
-    
-    jmp entry_32bit         ; Jump to our 32-bit manager
+    mov esp, 0x90000        ; Set up stack pointer
+
+    extern entry_32bit      ; Defined in kernel_entry.asm
+    jmp entry_32bit
 
 times 510 - ($ - $$) db 0
 dw 0xaa55
