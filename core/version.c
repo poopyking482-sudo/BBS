@@ -1,3 +1,5 @@
+#include "init/sys_io.h"
+
 void version(int argc, char **argv) 
     io_print("BSS version 1\n"); 
     io_print("Bulit by");
