@@ -36,8 +36,11 @@ read_ata_sectors:
 
 .wait_ready:
     in al, dx
-    test al, 0x08           ; Check DRQ bit (Data Request Ready)
-    jz .wait_ready
+    test al, 0x80           ; Check BSY bit (Bit 7: Busy)
+    jnz .wait_ready         ; If set, drive is busy, keep waiting
+    test al, 0x08           ; Check DRQ bit (Bit 3: Data Request Ready)
+    jz .wait_ready          ; If not ready yet, keep waiting
+
 
     mov ecx, 256            ; 256 words = 512 bytes per sector
     mov edx, 0x1F0          ; Data port
