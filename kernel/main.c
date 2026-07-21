@@ -1,9 +1,9 @@
 #include <stdint.h>
 #include "include/vfs.h"
-#include "include/Kinterrupt.h"
-#include "include/Kio_ports.h"
-#include "include/Ksubsys.h"
-#include "include/Ktime.h"
+#include "include/kinterrupt.h"
+#include "include/kio_ports.h"
+#include "include/ksubsys.h"
+#include "include/ktime.h"
 
 #define VGA_ADDR 0xB8000
 #define VGA_COLS 80
