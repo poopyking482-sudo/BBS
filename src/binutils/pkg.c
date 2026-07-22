@@ -1,7 +1,7 @@
 #include "init/include/sys_io.h"
-#include "include/sys_string.h"
-#include "include/binutils.h"
-#include "include/vfs.h"
+#include "kshell/sys_string.h"
+#include "binutils.h"
+#include "fs/vfs.h"
 
 #define MAX_PACKAGES 32
 
