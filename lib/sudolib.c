@@ -1,5 +1,5 @@
 #include "init/include/sys_io.h"
-#include "include/sys_string.h"
+#include "src/kshell/sys_string.h"
 #include "include/sudolib.h"
 #include "include/userlib.h"
 
@@ -12,7 +12,7 @@ void sudolib_init(void) {
     sudoers_count = 0;
     elevated_flag = 0;
 
-    // be root or be user
+    // be root or be user.
     sudolib_add_rule(1000, 1, "/");
 }
 
