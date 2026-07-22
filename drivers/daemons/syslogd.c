@@ -9,7 +9,7 @@ static const char *level_strings[] = {
 };
 
 void syslogd_init(void) {
-    io_print("[syslogd] Logging daemon initialized.\n");
+    io_print("[syslogd] logging daemon initialized\n");
 }
 
 void syslogd_log(uint8_t level, const char *origin, const char *msg) {
