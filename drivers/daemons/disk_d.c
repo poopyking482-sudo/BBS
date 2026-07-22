@@ -12,11 +12,11 @@ void disk_daemon_loop(void) {
         if (kipc_recv(IPC_ANY_SENDER, &msg) == 0) {
             switch (msg.command) {
                 case DISK_CMD_CREATE:
-                    io_print("[disk_d] IPC Received: Creating file...\n");
+                    io_print("[disk_d] received command: creating file..\n");
                     break;
 
                 case DISK_CMD_DELETE:
-                    io_print("[disk_d] IPC Received: Deleting file...\n");
+                    io_print("[disk_d] received command: deleting file..\n");
                     break;
 
                 default:
